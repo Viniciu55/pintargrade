@@ -4,7 +4,7 @@ import os
 verdes = []
 azuis =[]
 vermelhas = []
-arq_necessarios=["verde.txt","azul.txt","vermelho.txt"]
+arq_necessarios=["assets/verde.txt","assets/azul.txt","assets/vermelho.txt"]
 for a in arq_necessarios:
     try:
         arq = open(a,"r")
@@ -12,25 +12,25 @@ for a in arq_necessarios:
         comando = "touch"+" "+a
         os.system(comando)
 try:
-    arq = open("./GRADE_NEW.jpeg", "r")
+    arq = open("./assets/GRADE_NEW.jpeg", "r")
 except FileNotFoundError:
     print("ERRO!!")
     print("a imagem base não foi encontrada, encerrando programa")
     exit()
 
 #lendo os arquivos
-with open("verde.txt","r") as arquivo:
+with open("assets/verde.txt","r") as arquivo:
     for linha in arquivo:
         verdes.append(linha.strip())
-with open("vermelho.txt","r") as arquivo:
+with open("assets/vermelho.txt","r") as arquivo:
     for linha in arquivo:
         vermelhas.append(linha.strip())
-with open("azul.txt","r") as arquivo:
+with open("assets/azul.txt","r") as arquivo:
     for linha in arquivo:
         azuis.append(linha.strip())
 
 # Abrindo a imagem
-imagem = Image.open("./GRADE_NEW.jpeg")
+imagem = Image.open("./assets/GRADE_NEW.jpeg")
 objeto = ImageDraw.Draw(imagem)
 
 semestres = [0,115,299,480,655,835,1019,1199] 
@@ -61,31 +61,31 @@ def Gravarlista():
     print()
     res = int(input())
     if res == 1:
-        with open("verde.txt", "w") as arquivo:
+        with open("assets/verde.txt", "w") as arquivo:
             for materia in verdes:
                 arquivo.write(materia + "\n")
         os.system('clear')
-        print("matérias salvas em verde.txt")
+        print("matérias salvas em assets/verde.txt")
     elif res == 2:
-        with open("azul.txt", "w") as arquivo:
+        with open("assets/azul.txt", "w") as arquivo:
             for materia in azuis:
                 arquivo.write(materia + "\n")
         os.system('clear')
-        print("matérias salvas em azul.txt")
+        print("matérias salvas em assets/azul.txt")
     elif res == 3:
-        with open("vermelho.txt", "w") as arquivo:
+        with open("assets/vermelho.txt", "w") as arquivo:
             for materia in vermelhas:
                 arquivo.write(materia + "\n")
         os.system('clear')
         print("matérias salvas em vermelhas.txt")
     elif res == 3:
-        with open("verde.txt", "w") as arquivo:
+        with open("assets/verde.txt", "w") as arquivo:
             for materia in verdes:
                 arquivo.write(materia + "\n")
-        with open("azul.txt", "w") as arquivo:
+        with open("assets/azul.txt", "w") as arquivo:
             for materia in azuis:
                 arquivo.write(materia + "\n")
-        with open("vermelho.txt", "w") as arquivo:
+        with open("assets/vermelho.txt", "w") as arquivo:
             for materia in vermelhas:
                 arquivo.write(materia + "\n")
         os.system('clear')
@@ -114,11 +114,11 @@ def Inserirverdes():
     print('deseja salvar as alterações? [s] para "sim"')
     res = input()
     if res== "s":
-        with open("verde.txt", "w") as arquivo:
+        with open("assets/verde.txt", "w") as arquivo:
             for materia in verdes:
                 arquivo.write(materia + "\n")
         os.system('clear')
-        print("matérias salvas em verde.txt")
+        print("matérias salvas em assets/verde.txt")
 
 def Inserirazul():
     print('LISTA AZUL')
@@ -143,11 +143,11 @@ def Inserirazul():
     print('deseja salvar as alterações? [s] para "sim"')
     res = input()
     if res== "s":
-        with open("azul.txt", "w") as arquivo:
+        with open("assets/azul.txt", "w") as arquivo:
             for materia in azuis:
                 arquivo.write(materia + "\n")
         os.system('clear')
-        print("matérias salvas em azul.txt")
+        print("matérias salvas em assets/azul.txt")
 
 def Inserirvermelhas():
     print('LISTA VERMELHA')
@@ -172,11 +172,11 @@ def Inserirvermelhas():
     print('deseja salvar as alterações? [s] para "sim"')
     res = input()
     if res == "s":
-        with open("vermelho.txt", "w") as arquivo:
+        with open("assets/vermelho.txt", "w") as arquivo:
             for materia in vermelhas:
                 arquivo.write(materia + "\n")
         os.system('clear')
-        print("matérias salvas em vermelho.txt")
+        print("matérias salvas em assets/vermelho.txt")
 
 def Removermateria():
     print("digite qual matéria deseja remover")
@@ -198,13 +198,13 @@ def Removermateria():
             break
         else:
             print(materia, "não foi encontrada nas listas")
-    with open("vermelho.txt", "w") as arquivo:
+    with open("assets/vermelho.txt", "w") as arquivo:
         for materia in vermelhas:
             arquivo.write(materia + "\n")
-    with open("azul.txt", "w") as arquivo:
+    with open("assets/azul.txt", "w") as arquivo:
         for materia in azuis:
             arquivo.write(materia + "\n")
-    with open("verde.txt", "w") as arquivo:
+    with open("assets/verde.txt", "w") as arquivo:
         for materia in verdes:
             arquivo.write(materia + "\n")
 
