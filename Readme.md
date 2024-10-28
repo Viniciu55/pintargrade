@@ -10,4 +10,5 @@ Este programa foi feito com base na grade do curso de Engenharia da computação
 - Quando o usuário terminar de adicionar as matérias nas listas correspondentes, o programa irá perguntar se o usuário deseja salvar as alterações, se ele optar por salvar elas, as informações serão gravadas no HD, em um arquivo txt, caso ele não salve, ele irá conseguir gerar a imagem como pediu, porém depois de gerar a imagem, toda a informação será perdida, porém caso ele não tenha apertado em salvar e queira que as informações fiquem gravadas, ele pode usar a opção "salvar", no menu principal, Ao terminar de organizar tudo, digite "gerar" ou [6] para gerar a imagem, que irá aparecer no mesmo diretório, com o nome de: grade_pintada.jpg.
 
 # Especificações técnicas:
-obs: esse programa foi feito com o python3 e usa a biblioteca PIL e OS, e utiliza alguns comando s, caso queira usar no windows, altere a string ```'clear'``` passada como argumento para a biblioteca os.system para a string `'cls'`
+obs: esse programa foi feito com o python3 e usa as bibliotecas PIL e OS, do python.
+Na biblioteca OS, é utilizado um comando específico para sistemas Linux, caso queira usar no windows, altere a string ```'clear'``` passada como argumento para os.system para a string `'cls'`.
